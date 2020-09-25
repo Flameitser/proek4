@@ -3,24 +3,26 @@ class Program
 {
   static void Main(string[] args)
   {
-    Queue queue = new Queue();
+    Hashtable lookup = new Hashtable();
 
-    queue.Enqueue("First"); queue.Enqueue("Second"); queue.Enqueue("Third"); queue.EnqueueC'Fourth");
-  while (queue.Count > 0)
-      Stack stack = new Stack();
-    stack.Push(“First");
-    stack.Push("Second");
-    stack.Push("Third");
-    stack.Push("Fourth");
-    while (stack.Count > 0)
-    {
-      object obj = stack.Pop();
-      Console.WriteLine("'From Stack: {0}", obj);
-    }
+    lookup["0"] = "Zero";
+    lookup["1"] = "One";
+    lookup["2"] = "Two";
+    lookup["3"] = "Three";
+    lookup["4"] = "Four";
+    lookup["5"] = "Five";
+    lookup["6"] = "Six";
+    lookup["7"] = "Seven";
+    lookup["8"] = "Eight";
+    lookup["9"] = "Nine";
 
+    string ourNumber = 888 - 555 - 1212";
+  foreach (char с in ourNumber)
     {
-      object obj = queue.Dequeue();
-      Console.WriteLine("From Queue: {0}", obj);
+      string digit = c.ToString(); if (lookup.ContainsKey(digit))
+      {
+        Console.WriteLine(lookup[digit]);
+      }
     }
   }
 }
