@@ -3,18 +3,24 @@ class Program
 {
   static void Main(string[] args)
   {
-    ArrayList myList = new ArrayListO; myList.Add("First"); myList.Add("Second");
-    myList.Add("Third");
-    myList.Add("Fourth");
-    foreach (string item in myList)
+    Queue queue = new Queue();
+
+    queue.Enqueue("First"); queue.Enqueue("Second"); queue.Enqueue("Third"); queue.EnqueueC'Fourth");
+  while (queue.Count > 0)
+      Stack stack = new Stack();
+    stack.Push(“First");
+    stack.Push("Second");
+    stack.Push("Third");
+    stack.Push("Fourth");
+    while (stack.Count > 0)
     {
-      Console.WriteLine("Unsorted: {0}", item);
+      object obj = stack.Pop();
+      Console.WriteLine("'From Stack: {0}", obj);
     }
-    // Сортировка при помощи стандартного объекта сравнения 
-    myList.Sort();
-    foreach (string item in myList)
+
     {
-      Console.WriteLine("   Sorted: {0}", item);
+      object obj = queue.Dequeue();
+      Console.WriteLine("From Queue: {0}", obj);
     }
   }
 }
